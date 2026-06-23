@@ -103,7 +103,7 @@ class MemAE_SVDDHybrid(nn.Module):
                 fuse5 = self.fuse5(DWI_f, ADC_f, DCE_f)
                 z_proj5 = self.enc_proj5(fuse5)
                 z_5 = F.adaptive_avg_pool3d(z_proj5, 1).view(B, -1)
-                # 关键：不对 z_5 做 L2 归一化
+
                 all_z.append(z_5.cpu())
 
         self.center5.data = torch.cat(all_z, dim=0).mean(dim=0).to(device)
