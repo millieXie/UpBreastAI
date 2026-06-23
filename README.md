@@ -129,7 +129,7 @@ temperature = 0.05
 lambda_recon = 10.0
 lambda_diversity = 1e-3
 lambda_svdd = 0.1
-max_patience = 5
+max_patience = 20
 ```
 
 The model saves:
