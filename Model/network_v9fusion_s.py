@@ -1,7 +1,7 @@
 
 import torch.nn as nn
 import torch.nn.functional as F
-from Model.RUnet_encoder_decoder import *  # 请根据实际路径调整
+from Model.RUnet_encoder_decoder import *  
 
 class CrossModalFuse(nn.Module):
     def __init__(self, channels):
@@ -38,7 +38,6 @@ class FusionBlock(nn.Module):
         out = self.fuse(fused)
         return out
 
-# ===== MemAE + SVDD 混合模型（仅 memory5，关键修复版）=====
 class MemAE_SVDDHybrid(nn.Module):
     def __init__(self, in_channels=3, memory_dim=128, memory_size=500,
                  alpha_init=1.0, temperature=0.05):
