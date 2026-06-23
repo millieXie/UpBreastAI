@@ -73,27 +73,6 @@ DATA_ROOT/
 |   +-- DWI.nii.gz
 +-- ...
 ```
-
-The Excel file must contain at least:
-
-```text
-patient_id
-label
-```
-
-Label convention:
-
-```text
-0 = benign / normal
-1 = abnormal / DCIS
-```
-
-The default code currently points to absolute paths under:
-
-```text
-/home/data/xiexinyu_damo/BTDNet/Reconstruction/
-```
-
 ## Training
 
 Edit `train_new.py` first:
